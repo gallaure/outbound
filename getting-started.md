@@ -18,7 +18,7 @@ A front-end developer codes the visual design and interface of a website. They c
 Deploy and host a React app and add interactivity with a GraphQL API, Authentication, and database.
 
 ## Overview
-- Attributes for the *Tutorial Summary Card* (AWS experience level, time to complete, $ to complete, prerequisites)
+- Attributes for the __Tutorial Summary Card__ (AWS experience level, time to complete, $ to complete, prerequisites)
 - What you will learn
 - Application Architecture
 - Modules
@@ -109,7 +109,7 @@ g. Once the build completes, select the thumbnail to see your web app up and run
 
 In this step, you will make some changes to the code and push the changes to the master branch of your app.
 
-a. Edit *src/App.js*
+a. Edit __src/App.js__
 
 ```sh
 import React from 'react';
@@ -174,11 +174,11 @@ amplify configure
 
 Next, we will initialize an app locally. Since we have already created an Amplify, we can use this app configuration that has already been created.
 
-a. In the Amplify console, click on *Backend environments*.
+a. In the Amplify console, click on __Backend environments__.
 
 ![Backend environments](images/auth/1.png)
 
-b. In the *Backend environments* tab, copy the `amplify init` command to your keyboard
+b. In the __Backend environments__ tab, copy the `amplify init` command to your keyboard
 
 ![Amplify init](images/auth/2.png)
 
@@ -216,16 +216,16 @@ amplify console
 
 The next feature you will be adding is authentication. In this section, you will learn how to authenticate a user using Amazon Cognito, a managed user identity service.
 
-You will also learn how to use the AWS Amplify UI component library to scaffold out an entire user authentication flow, allowing users to sign up, sign in, and reset their password, with with just few lines of code.
+You will also learn how to use the AWS Amplify UI component library to scaffold out an entire user authentication flow, allowing users to sign up, sign in, and reset their password with with just few lines of code.
 
 Let's get started.
 
-## 1, Install the Amplify libraries
+## 1. Install the Amplify libraries
 
-We will be needing 2 amplify libraries for our project. The main `aws-amplify` library contains all of the client-side APIs for interacting with the various AWS services we will be working with, and the `@aws-amplify/ui-react` library contains framework-specific UI components.
+We will be needing 2 amplify libraries for our project. The main `aws-amplify` library contains all of the client-side APIs for interacting with the various AWS services we will be working with and the `@aws-amplify/ui-react` library contains framework-specific UI components.
 
 ```sh
-npm install aws-amplify aws-amplify-react
+npm install aws-amplify @aws-amplify/ui-react
 ```
 
 ## 2. Create the authentication service
@@ -248,9 +248,9 @@ Now that the authentication service has been configured locally, we can deploy i
 amplify push --y
 ```
 
-## 4. Congigure the React project with Amplify resources
+## 4. Configure the React project with Amplify resources
 
-The CLI has created and will continue to update a file called *aws-exports.js* located in the *src* directory of our project. We need to use this file to let the React project know about the different resources that are available. To configure our app with these resources, open *src/index.js* and add the following code below the last import:
+The CLI has created and will continue to update a file called __aws-exports.js__ located in the __src__ directory of our project. We need to use this file to let the React project know about the different resources that are available. To configure our app with these resources, open __src/index.js__ and add the following code below the last import:
 
 ```js
 import Amplify from 'aws-amplify';
@@ -260,7 +260,7 @@ Amplify.configure(config);
 
 ## 5. Add the authentication flow in App.js
 
-Next, open *src.App.js* and update with the following code.
+Next, open __src.App.js__ and update with the following code.
 
 ```js
 import React from 'react';
@@ -337,7 +337,7 @@ amplify add api
 
 The CLI should open this GraphQL schema in your text editor.
 
-*amplify/backend/api/myapi/schema.graphql*
+__amplify/backend/api/myapi/schema.graphql__
 
 ```graphql
 type Note @model {
@@ -360,7 +360,7 @@ amplify push --y
 This will do 2 things:
 
 1. Create the API in your account
-2. Create the GraphQL local operations in a folder located at *src/graphql* that you can use to query the API
+2. Create the GraphQL local operations in a folder located at __src/graphql__ that you can use to query the API
 
 To view the GraphQL API in your account at any time, run the following command:
 
@@ -380,7 +380,7 @@ amplify console
 
 Now that the back end has been deployed, let's write some code to allow users to create, list, and delete notes.
 
-Open *src/App.js* with the following code:
+Open __src/App.js__ with the following code:
 
 ```js
 import React, { useState, useEffect } from 'react';
@@ -499,7 +499,7 @@ amplify add storage
 
 ## 2. Updating the GraphQL schema
 
-Next, open *amplify/backend/api/notesapp/schema.graphql* and update it to the following:
+Next, open __amplify/backend/api/notesapp/schema.graphql__ and update it to the following:
 
 ```sh
 type Note @model {
