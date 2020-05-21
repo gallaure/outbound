@@ -311,7 +311,7 @@ You have now added user authentication to your app!
 
 # Module 4: Add a GraphQL API and database
 
-Now that we've created and configured a the app with Authentication, let's add an API.
+Now that we've created and configured the app with Authentication, let's add an API.
 
 The API you will be creating in this step is a GraphQL API using AWS AppSync (a managed GraphQL service) backed by Amazon DynamoDB (a NoSQL database).
 
