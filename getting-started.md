@@ -14,7 +14,7 @@ A front-end developer codes the visual design and interface of a website. They c
 
 - Get started
 
-# Build a ReactJS Todo app 
+# Build a ReactJS Notes app 
 Deploy and host a React app and add interactivity with a GraphQL API, Authentication, and database.
 
 ## Overview
@@ -293,6 +293,8 @@ npm start
 
 Here, you can try signing up which will automatically then sign you in. When signed in, you should be see a sign out button that will sign the user out and restart the authentication flow.
 
+![Amplify authentication flow](images/auth/3.png)
+
 ## 7. Deploy the changes to the production environment
 
 Deply the changes to GitHub to kick off a new build in the Amplify console
@@ -311,14 +313,77 @@ You have now added user authentication to your app!
 
 Now that we've created and configured a the app with Authentication, let's add an API.
 
-The API you will be creating in this step is a GraphQL API using AWS AppSync (a managed GraphQL service) and the database will be Amazon DynamoDB (a NoSQL database).
+The API you will be creating in this step is a GraphQL API using AWS AppSync (a managed GraphQL service) and the database will be Amazon DynamoDB (a NoSQL database). The app we will be building will be a Notes app that will allow users to create, delete, and list notes. This example will give you a good idea how to build many popular types of CRUD+L (create, update, delete, list) applications.
+
 
 ## 1. Create a GraphQL API and database
 
-Add a GraphQL API to your app and automatically provision a database by running the the following command from the root of your application directory:
+a. Add a GraphQL API to your app and automatically provision a database by running the the following command from the root of your application directory:
 
 ```sh
 amplify add api
+
+? Please select from one of the below mentioned services: GraphQL
+? Provide API name: notesapp
+? Choose the default authorization type for the API: API Key
+? Enter a description for the API key: demo
+? After how many days from now the API key should expire: 7 (or your preferred expiration)
+? Do you want to configure advanced settings for the GraphQL API: No
+? Do you have an annotated GraphQL schema?  No
+? Do you want a guided schema creation?  Yes
+? What best describes your project: Single object with fields
+? Do you want to edit the schema now? Yes
+```
+
+The CLI should open this GraphQL schema in your text editor.
+
+*amplify/backend/api/myapi/schema.graphql*
+
+```graphql
+type Note @model {
+  id: ID!
+  name: String!
+  description: String
+}
+```
+
+Next, save the file. Then go back to the command line and hit enter to complete the API configuration step.
+
+## 2. Deploy the API
+
+Now that the API has been configured locally it is time to deploy it. To do so, run the Amplify `push` command:
+
+```sh
+amplify push --y
+```
+
+This will do 2 things:
+
+1. Create the API in your account
+2. Create the GraphQL local operations in a folder located at *src/graphql* that you can use to query the API
+
+To view the GraphQL API in your account at any time, run the following command:
+
+```sh
+amplify console api
+
+> Choose GraphQL
+```
+
+To vie the Amplify app in your account at any time, run the following command:
+
+```sh
+amplify console
+```
+
+## 3. Writing the front end code to interact with the API
+
+Now that the back end has been deployed, let's write some code to allow users to create, list, and delete notes.
+
+Open *src/App.js* with the following code:
+
+```js
+
 ```
 
 # Module 5: Capture user analytics
