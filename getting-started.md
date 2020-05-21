@@ -200,7 +200,7 @@ amplify init --appId your-app-id
 
 > Be sure that the profile you are choosing has been configured using the same region as the Amplify project you already deployed.
 
-## Congratulations
+## Congratulations 🎉
 
 You have initialzed the Amplify project and are now ready to start adding features!
 
@@ -305,7 +305,7 @@ git commit -m 'added auth'
 git push origin master
 ```
 
-## Congratulations
+## Congratulations 🎉
 
 You have now added user authentication to your app!
 
@@ -473,7 +473,7 @@ To test out the app, run the `start` command:
 npm start
 ```
 
-## Congratulations
+## Congratulations 🎉
 
 You have now created a Notes app! You added an AppSync GraphQL API and Amazon DynamoDB database as well as configured create, read, and delete functionality to your app.
 
@@ -623,7 +623,7 @@ npm start
 
 You should now be able to optionally upload an image for each note.
 
-## Congratulations
+## Congratulations 🎉
 
 You have now added image storage using Amazon S3 and integrated image storage into your app.
 
