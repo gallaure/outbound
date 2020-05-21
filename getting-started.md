@@ -562,10 +562,10 @@ async function fetchNotes() {
     const notesFromAPI = apiData.data.listNotes.items;
     await Promise.all(notesFromAPI.map(async note => {
       if (note.image) {
-        const image = await Storage.get(note.image)
-        note.image = image
+        const image = await Storage.get(note.image);
+        note.image = image;
       }
-      return note
+      return note;
     }))
     setNotes(apiData.data.listNotes.items);
   } catch (err) { console.log({ err })}
@@ -580,8 +580,8 @@ async function createNote() {
     if (!formData.name || !formData.description) return;
     await API.graphql({ query: createNoteMutation, variables: { input: formData } });
     if (formData.image) {
-      const image = await Storage.get(formData.image)
-      formData.image = image
+      const image = await Storage.get(formData.image);
+      formData.image = image;
     }
     setNotes([ ...notes, formData ]);
     setFormData(initialFormState);
