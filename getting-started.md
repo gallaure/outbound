@@ -317,7 +317,7 @@ Now that we've created and configured a the app with Authentication, let's add a
 
 The API you will be creating in this step is a GraphQL API using AWS AppSync (a managed GraphQL service) backed by Amazon DynamoDB (a NoSQL database).
 
-The app we will be building will be a Notes app that will allow users to create, delete, and list notes. This example will give you a good idea how to build many popular types of CRUD+L (create, update, delete, list) applications.
+The app we will be building will be a Notes app that will allow users to create, delete, and list notes. This example will give you a good idea how to build many popular types of CRUD+L (create, read, update, delete, list) applications.
 
 
 ## 1. Create a GraphQL API and database
