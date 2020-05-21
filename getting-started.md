@@ -12,8 +12,6 @@ A front-end developer codes the visual design and interface of a website. They c
 #### Data and storage
 - Add an API, database, and image storage to your website
 
-- Get started
-
 # Build a ReactJS Notes app 
 Deploy and host a React app and add interactivity with a GraphQL API, Authentication, database, and image storage.
 
