@@ -1,7 +1,7 @@
 # Learning path (Frontend developer)
 
 ### What is a Frontend developer?
-A front-end developer codes the visual design and interface of a website. They convert ideas and designs into HTML, JavaScript (JS) and/or CSS - the core elements of front-end development. This includes layout, content, buttons, images, navigation, and links.
+As a front-end or mobile developer, you build feature-rich web and mobile applications. You use popular front-end web or mobile frameworks including React, Vue, Angular, Iconic or React Native, iOS/Android, to build the presentation layer of your app (e.g., the layout, the positioning of text and images, colors, fonts, buttons, etc.). You also build features with cloud functionality into your app such as auth, data, analytics, push notifications and more. Since you focus first on the customer experience, you seek ways to quickly build and connect cloud enabled features to your app before deploying.
 
 ### What will I learn
 
