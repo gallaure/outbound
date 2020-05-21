@@ -297,7 +297,7 @@ Here, you can try signing up which will then automatically sign you in. When sig
 
 ![Amplify authentication flow](images/auth/3.png)
 
-## 7. Deploy the changes to the production environment
+## 7. Deploy the changes to the live environment
 
 Deply the changes to GitHub to kick off a new build in the Amplify console
 
@@ -315,7 +315,9 @@ You have now added user authentication to your app!
 
 Now that we've created and configured a the app with Authentication, let's add an API.
 
-The API you will be creating in this step is a GraphQL API using AWS AppSync (a managed GraphQL service) and the database will be Amazon DynamoDB (a NoSQL database). The app we will be building will be a Notes app that will allow users to create, delete, and list notes. This example will give you a good idea how to build many popular types of CRUD+L (create, update, delete, list) applications.
+The API you will be creating in this step is a GraphQL API using AWS AppSync (a managed GraphQL service) backed by Amazon DynamoDB (a NoSQL database).
+
+The app we will be building will be a Notes app that will allow users to create, delete, and list notes. This example will give you a good idea how to build many popular types of CRUD+L (create, update, delete, list) applications.
 
 
 ## 1. Create a GraphQL API and database
