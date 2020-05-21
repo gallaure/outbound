@@ -293,7 +293,7 @@ Next, run the app to see the new Authentication flow protecting the app:
 npm start
 ```
 
-Here, you can try signing up which will then automatically then sign you in. When signed in, you should be see a sign out button that will sign the user out and restart the authentication flow.
+Here, you can try signing up which will then automatically sign you in. When signed in, you should be see a sign out button that will sign the user out and restart the authentication flow.
 
 ![Amplify authentication flow](images/auth/3.png)
 
