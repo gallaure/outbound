@@ -322,7 +322,7 @@ The app we will be building will be a Notes app that will allow users to create,
 
 ## 1. Create a GraphQL API and database
 
-a. Add a GraphQL API to your app and automatically provision a database by running the the following command from the root of your application directory:
+a. Add a GraphQL API to your app and automatically provision a database by running the the following command from the root of your app directory:
 
 ```sh
 amplify add api
@@ -625,3 +625,29 @@ You should now be able to optionally upload an image for each note.
 ## Congratulations
 
 You have now added image storage using Amazon S3 and integrated image storage into your app.
+
+# Deleting the resources
+
+## Removing individual services
+
+To remove individual services, you can use the Amplify `remove` command:
+
+```sh
+amplify remove auth
+
+? Choose the resource you would want to remove: <your-service-name>
+```
+
+Then run the Amplify `push` command:
+
+```sh
+amplify push
+```
+
+## Deleting the entire project
+
+To delete the project and the associated resources, you can run the Amplify `delete` command:
+
+```sh
+amplify delete 
+```
