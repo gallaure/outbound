@@ -220,7 +220,7 @@ Let's get started.
 
 ## 1. Install the Amplify libraries
 
-We will be needing 2 amplify libraries for our project. The main `aws-amplify` library contains all of the client-side APIs for interacting with the various AWS services we will be working with and the `@aws-amplify/ui-react` library contains framework-specific UI components.
+We will be needing 2 Amplify libraries for our project. The main `aws-amplify` library contains all of the client-side APIs for interacting with the various AWS services we will be working with and the `@aws-amplify/ui-react` library contains framework-specific UI components.
 
 ```sh
 npm install aws-amplify @aws-amplify/ui-react
@@ -258,7 +258,7 @@ Amplify.configure(config);
 
 ## 5. Add the authentication flow in App.js
 
-Next, open __src.App.js__ and update with the following code.
+Next, open __src/App.js__ and update with the following code.
 
 ```js
 import React from 'react';
@@ -400,15 +400,18 @@ const initialFormState = { name: '', description: '' }
 function App() {
   const [notes, setNotes] = useState([]);
   const [formData, setFormData] = useState(initialFormState);
+
   useEffect(() => {
     fetchNotes();
-  }, [])
+  }, []);
+
   async function fetchNotes() {
     try {
      const apiData = await API.graphql({ query: listNotes });
      setNotes(apiData.data.listNotes.items);
     } catch (err) { console.log({ err })}
   }
+
   async function createNote() {
     try {
       if (!formData.name || !formData.description) return;
@@ -417,6 +420,7 @@ function App() {
       setFormData(initialFormState);
     } catch (err) { console.log({ err })}
   }
+
   async function deleteNote({ id }) {
     const newNotesArray = notes.filter(note => note.id !== id);
     setNotes(newNotesArray);
@@ -424,6 +428,7 @@ function App() {
       await API.graphql({ query: deleteNoteMutation, variables: { id }});
     } catch (err) { console.log({ err })}
   }
+
   return (
     <div className="App">
       <h1>My Notes App</h1>
