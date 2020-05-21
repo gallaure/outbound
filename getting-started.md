@@ -387,7 +387,7 @@ amplify console
 
 Now that the back end has been deployed, let's write some code to allow users to create, list, and delete notes.
 
-Open __src/App.js__ with the following code:
+Update __src/App.js__ with the following code:
 
 ```js
 import React, { useState, useEffect } from 'react';
