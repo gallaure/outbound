@@ -31,9 +31,7 @@ Deploy and host a React app and add interactivity with authentication, API, data
 
 #### 1. Sign up for AWS
 
-You need an AWS account to following this tutorial on the AWS Amplify Console. There is no additional charge for using AWS Amplify with this tutorial. The resources you create in this tutorial are Free Tier eligible. 
-
-[Sign up for AWS](https://portal.aws.amazon.com/billing/signup/iam?#/start)
+You need an AWS account to following this tutorial on the AWS Amplify Console. There is no additional charge for using AWS Amplify with this tutorial. The resources you create in this tutorial are Free Tier eligible. You can sign up for AWS [here](https://portal.aws.amazon.com/billing/signup/iam?#/start)
 
 #### 2. Node.js
 
