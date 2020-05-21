@@ -250,7 +250,7 @@ amplify push --y
 
 ## 4. Configure the React project with Amplify resources
 
-The CLI has created and will continue to update a file called __aws-exports.js__ located in the __src__ directory of our project. We need to use this file to let the React project know about the different resources that are available. To configure our app with these resources, open __src/index.js__ and add the following code below the last import:
+The CLI has created and will continue to update a file called __aws-exports.js__ located in the __src__ directory of our project. We will use this file to let the React project know about the different AWS resources that are available in our Amplify project. To configure our app with these resources, open __src/index.js__ and add the following code below the last import:
 
 ```js
 import Amplify from 'aws-amplify';
