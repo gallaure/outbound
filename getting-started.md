@@ -322,7 +322,7 @@ The app we will be building will be a Notes app that will allow users to create,
 
 ## 1. Create a GraphQL API and database
 
-a. Add a GraphQL API to your app and automatically provision a database by running the the following command from the root of your app directory:
+a. Add a GraphQL API to your app by running the the following command from the root of your app directory:
 
 ```sh
 amplify add api
@@ -339,9 +339,11 @@ amplify add api
 ? Do you want to edit the schema now? Yes
 ```
 
-The CLI should open this GraphQL schema in your text editor.
+The CLI should open the GraphQL schema in your text editor.
 
 __amplify/backend/api/myapi/schema.graphql__
+
+Update the file with the following schema:
 
 ```graphql
 type Note @model {
