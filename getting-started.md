@@ -140,7 +140,7 @@ c. Once the build is complete, select the thumbnail on the AWS Amplify console t
 
 ![Updated app](images/hosting/10.png)
 
-## Congratulations
+## Congratulations 🎉
 You have deployed a React application in the cloud by integrating with GitHub and using the Amplify Console.
 
 With AWS Amplify Console, you can continuously deploy your application in the cloud and host it on a globally available CDN.
