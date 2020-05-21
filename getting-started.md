@@ -283,6 +283,8 @@ function App() {
 export default withAuthenticator(App);
 ```
 
+In this component we've used the `withAuthenticator` component. This component will scaffold out an entire user authentication flow allowing users to sign up, sign in, confirm sign in for MFA, and reset their password.
+
 ## 6. Run the app locally
 
 Next, run the app to see the new Authentication flow protecting the app:
