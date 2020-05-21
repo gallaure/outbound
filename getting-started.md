@@ -377,7 +377,7 @@ amplify console api
 > Choose GraphQL
 ```
 
-To vie the Amplify app in your account at any time, run the following command:
+To view the Amplify app in your account at any time, run the following command:
 
 ```sh
 amplify console
