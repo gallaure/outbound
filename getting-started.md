@@ -532,7 +532,7 @@ amplify push --y
 
 ## 4. Update the React app
 
-Now that the back end has been updated, let's update the React app to add the functionality to upload and view images for a note. Open *src/App.js* and make the following changes.
+Now that the back end has been updated, let's update the React app to add the functionality to upload and view images for a note. Open __src/App.js__ and make the following changes.
 
 a. First add the `Storage` class to your Amplify imports.
 
