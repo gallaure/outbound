@@ -161,7 +161,7 @@ npm install -g @aws-amplify/cli
 
 Amazon IAM (Identity and Access Management) enables you to manage users and user permissions in AWS. The CLI uses IAM to create and manage services programmatically on your behalf via the CLI.
 
-To configure the CLI, run the `configure command`.
+To configure the CLI, run the `configure` command.
 
 > To see a video walkthrough of the CLI configureation process, click [here](https://www.youtube.com/watch?v=fWbM5DLh25U).
 
