@@ -1,19 +1,25 @@
 # Learning path (Frontend developer)
 
 ### What is a Frontend developer?
-As a front-end or mobile developer, you build feature-rich web and mobile applications. You use popular front-end web or mobile frameworks including React, Vue, Angular, Iconic or React Native, iOS/Android, to build the presentation layer of your app (e.g., the layout, the positioning of text and images, colors, fonts, buttons, etc.). You also build features with cloud functionality into your app such as auth, data, analytics, push notifications and more. Since you focus first on the customer experience, you seek ways to quickly build and connect cloud enabled features to your app before deploying.
+As a frontend or mobile developer, you build feature-rich web and mobile applications. You use popular frontend web or mobile frameworks including React, Vue, Angular, Iconic or React Native, iOS/Android, to build the presentation layer of your app (e.g., the layout, the positioning of text and images, colors, fonts, buttons, etc.).
 
-### What will I learn
+Using Amplify, you can use your existing frontend skillset to add cloud functionality into your app such as auth, data, analytics, push notifications and more.
+
+### What will I learn?
+
+You'll learn how to use AWS Amplify - a framework, CLI, and hosting service - to build a full stack cloud application.
 
 #### Hosting
-- Set up and host your website on a Global CDN
-#### Authentication
-- Add authentication to your website
-#### Data and storage
-- Add an API, database, and image storage to your website
+- Set up and host your app on a the AWS Global content delivery network (CDN)
 
-# Build a ReactJS Notes app 
-Deploy and host a React app and add interactivity with a GraphQL API, Authentication, database, and image storage.
+#### Authentication
+- Add authentication to your app
+
+#### Data and storage
+- Add an API, database, and image storage to your app
+
+# Build a ReactJS Notes app
+Deploy and host a React app and add interactivity with authentication, API, database, and image storage.
 
 ## Overview
 - Attributes for the __Tutorial Summary Card__ (AWS experience level, time to complete, $ to complete, prerequisites)
@@ -21,31 +27,31 @@ Deploy and host a React app and add interactivity with a GraphQL API, Authentica
 - Application Architecture
 - Modules
 
-# Module 1: Deploy and host a React app
+## Prerequisites
 
-AWS Amplify Console provides a Git-based CI/CD workflow for developing, deploying, and hosting single page web applications or static sites with serverless backends. Upon connecting to a Git repository, Amplify determines the build settings for both the frontend framework and any serverless backend resources configured with the Amplify CLI, and automatically deploys updates with every code commit.
-
-In this tutorial, we’ll begin by creating a new React application and pushing it to a GitHub repository.  Then, we will connect the repo to the Amplify Console and deploy it to a globally available content delivery network (CDN) hosted on an amplifyapp.com domain. Next, we’ll demonstrate continuous deployment capabilities by making changes to the React application and pushing a new version to the master branch which will automatically kick off a new deployment.
-
-Everything done in this tutorial is free tier eligible.
-
-## 1. Sign up for AWS
+#### 1. Sign up for AWS
 
 You need an AWS account to following this tutorial on the AWS Amplify Console. There is no additional charge for using AWS Amplify with this tutorial. The resources you create in this tutorial are Free Tier eligible. 
 
 [Sign up for AWS](https://portal.aws.amazon.com/billing/signup/iam?#/start)
 
-## 2. Confirm environmental setup
+#### 2. Node.js
 
-Open your command line interface and enter the following command:
+[Node.js](https://nodejs.org/en/) v10.x or later
 
-```sh
-node -v;
-```
+#### 3. GitHub account
 
-If this command returns less than v8.0, upgrade node to a version greater than version 8. if the command not found, install the node from [nodejs.org/download](nodejs.org/download).
+If you do not have a GitHub account, sign up for one [here](http://github.com/).
 
-## 3. Create a new React application
+# Module 1: Deploy and host a React app
+
+AWS Amplify provides a Git-based CI/CD workflow for developing, deploying, and hosting single page web applications or static sites with serverless backends. Upon connecting to a Git repository, Amplify determines the build settings for both the front end framework and any serverless backend resources configured with the Amplify CLI, and automatically deploys updates with every code commit.
+
+In this tutorial, we’ll begin by creating a new React application and pushing it to a GitHub repository.  Then, we will connect the repo to the Amplify Console and deploy it to a globally available content delivery network (CDN) hosted on an amplifyapp.com domain. Next, we’ll demonstrate continuous deployment capabilities by making changes to the React application and pushing a new version to the master branch which will automatically kick off a new deployment.
+
+Everything done in this tutorial is free tier eligible.
+
+## 1. Create a new React application
 
 The easiest way to create a React application is by using the command create-react-app. Install this package using the following command:
 
@@ -55,7 +61,7 @@ cd amplifyapp
 npm start
 ```
 
-## 4. Initialize GitHub repository
+## 2. Initialize GitHub repository
 
 In this step, you will create a GitHub repository and commit your code to the repository. You will need a GitHub account to complete this step – if you do not have an account, sign up [here](here).
 
@@ -72,13 +78,13 @@ git commit -m ‘initial commit’
 git push origin master
 ```
 
-## 5. Log in to the AWS Amplify Console
+## 3. Log in to the AWS Amplify Console
 
-Open the [AWS Management Console](AWS Management Console) in a new browser window, so you can keep this step-by-step guide open. When the screen loads, enter your user name and password to get started. Then type Amplify in the search bar and select AWS Amplify to open the service console.
+Open the [AWS Management Console](https://console.aws.amazon.com/amplify/home) in a new browser window, so you can keep this step-by-step guide open. When the screen loads, enter your user name and password to get started. Then type Amplify in the search bar and select AWS Amplify to open the service console.
 
 ![Login to the AWS Amplify Console](images/hosting/2.png)
 
-## 6. Deploy your app to AWS Amplify
+## 4. Deploy your app to AWS Amplify
 
 In this step, you will connect the GitHub repository you just created to the AWS Amplify service. This will enable you to build, deploy, and host your app on AWS.
 
@@ -103,7 +109,7 @@ f. AWS Amplify Console will now build your source code and deploy your app at ht
 g. Once the build completes, select the thumbnail to see your web app up and running live.
 ![View your app](images/hosting/9.png)
 
-## 7. Automatically deploy code changes
+## 5. Automatically deploy code changes
 
 In this step, you will make some changes to the code and push the changes to the master branch of your app.
 
@@ -406,27 +412,21 @@ function App() {
   }, []);
 
   async function fetchNotes() {
-    try {
-     const apiData = await API.graphql({ query: listNotes });
-     setNotes(apiData.data.listNotes.items);
-    } catch (err) { console.log({ err })}
+    const apiData = await API.graphql({ query: listNotes });
+    setNotes(apiData.data.listNotes.items);
   }
 
   async function createNote() {
-    try {
-      if (!formData.name || !formData.description) return;
-      await API.graphql({ query: createNoteMutation, variables: { input: formData } });
-      setNotes([ ...notes, formData ]);
-      setFormData(initialFormState);
-    } catch (err) { console.log({ err })}
+    if (!formData.name || !formData.description) return;
+    await API.graphql({ query: createNoteMutation, variables: { input: formData } });
+    setNotes([ ...notes, formData ]);
+    setFormData(initialFormState);
   }
 
   async function deleteNote({ id }) {
     const newNotesArray = notes.filter(note => note.id !== id);
     setNotes(newNotesArray);
-    try {
-      await API.graphql({ query: deleteNoteMutation, variables: { id }});
-    } catch (err) { console.log({ err })}
+    await API.graphql({ query: deleteNoteMutation, variables: { id }});
   }
 
   return (
@@ -547,10 +547,8 @@ async function onChange(e) {
   if (!e.target.files[0]) return
   const file = e.target.files[0];
   setFormData({ ...formData, image: file.name });
-  try {
-    await Storage.put(file.name, file);
-    fetchNotes();
-  } catch (err) { console.log({ err}) } 
+  await Storage.put(file.name, file);
+  fetchNotes();
 }
 ```
 
@@ -558,18 +556,16 @@ c. Update the `fetchNotes` function to fetch an image if there is an image assoc
 
 ```js
 async function fetchNotes() {
-  try {
-    const apiData = await API.graphql({ query: listNotes });
-    const notesFromAPI = apiData.data.listNotes.items;
-    await Promise.all(notesFromAPI.map(async note => {
-      if (note.image) {
-        const image = await Storage.get(note.image);
-        note.image = image;
-      }
-      return note;
-    }))
-    setNotes(apiData.data.listNotes.items);
-  } catch (err) { console.log({ err })}
+  const apiData = await API.graphql({ query: listNotes });
+  const notesFromAPI = apiData.data.listNotes.items;
+  await Promise.all(notesFromAPI.map(async note => {
+    if (note.image) {
+      const image = await Storage.get(note.image);
+      note.image = image;
+    }
+    return note;
+  }))
+  setNotes(apiData.data.listNotes.items);
 }
 ```
 
@@ -577,16 +573,14 @@ d. Update the `createNote` function to add the image to the local image array if
 
 ```js
 async function createNote() {
-  try {
-    if (!formData.name || !formData.description) return;
-    await API.graphql({ query: createNoteMutation, variables: { input: formData } });
-    if (formData.image) {
-      const image = await Storage.get(formData.image);
-      formData.image = image;
-    }
-    setNotes([ ...notes, formData ]);
-    setFormData(initialFormState);
-  } catch (err) { console.log({ err })}
+  if (!formData.name || !formData.description) return;
+  await API.graphql({ query: createNoteMutation, variables: { input: formData } });
+  if (formData.image) {
+    const image = await Storage.get(formData.image);
+    formData.image = image;
+  }
+  setNotes([ ...notes, formData ]);
+  setFormData(initialFormState);
 }
 ```
 
