@@ -491,7 +491,7 @@ To do so, we'll need to do three things:
 
 ## 1. Creating the Storage service
 
-To add image storage, we'll use the `storage` Amplify category:
+To add image storage, we'll use the Amplify `storage` category:
 
 ```sh
 amplify add storage
@@ -506,9 +506,9 @@ amplify add storage
 
 ## 2. Updating the GraphQL schema
 
-Next, open __amplify/backend/api/notesapp/schema.graphql__ and update it to the following:
+Next, open __amplify/backend/api/notesapp/schema.graphql__ and update it with the following schema:
 
-```sh
+```graphql
 type Note @model {
   id: ID!
   name: String!
