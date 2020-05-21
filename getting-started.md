@@ -363,10 +363,11 @@ Now that the API has been configured locally it is time to deploy it. To do so, 
 amplify push --y
 ```
 
-This will do 2 things:
+This will do 3 things:
 
-1. Create the API in your account
-2. Create the GraphQL local operations in a folder located at __src/graphql__ that you can use to query the API
+1. Create the AppSync API
+2. Create a DynamoDB table
+3. Create the local GraphQL operations in a folder located at __src/graphql__ that you can use to query the API
 
 To view the GraphQL API in your account at any time, run the following command:
 
