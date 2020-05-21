@@ -1,7 +1,7 @@
 # Learning path (Frontend developer)
 
 ### What is a Frontend developer?
-As a frontend or mobile developer, you build feature-rich web and mobile applications. You use popular frontend web or mobile frameworks including React, Vue, Angular, Iconic or React Native, iOS/Android, to build the presentation layer of your app (e.g., the layout, the positioning of text and images, colors, fonts, buttons, etc.).
+As a frontend or mobile developer, you build feature-rich web and mobile applications. You use popular frontend web or mobile frameworks including React, Vue, Angular, Iconic or React Native, iOS/Android, to fetch and send data as well as build the presentation layer of your app (e.g., the layout, the positioning of text and images, colors, fonts, buttons, etc.).
 
 Using Amplify, you can use your existing frontend skillset to add cloud functionality into your app such as auth, data, analytics, push notifications and more.
 
