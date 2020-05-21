@@ -532,7 +532,7 @@ amplify push --y
 
 ## 4. Update the React app
 
-Now that the back end has been updated, let's update the React app to add the functionality to upload and view images for a note.
+Now that the back end has been updated, let's update the React app to add the functionality to upload and view images for a note. Open *src/App.js* and make the following changes.
 
 a. First add the `Storage` class to your Amplify imports.
 
@@ -545,12 +545,10 @@ b. In the main `App` function, create a new `onChange` function to handle the im
 ```js
 async function onChange(e) {
   if (!e.target.files[0]) return
-  const random = Math.random().toString(36).substring(7);
   const file = e.target.files[0];
-  const fileName = `${random}-${file.name}`
-  setFormData({ ...formData, image: fileName });
+  setFormData({ ...formData, image: file.name });
   try {
-    await Storage.put(fileName, file);
+    await Storage.put(file.name, file);
     fetchNotes();
   } catch (err) { console.log({ err}) } 
 }
