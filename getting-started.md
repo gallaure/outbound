@@ -7,24 +7,24 @@ Using Amplify you can use your existing frontend skillset to add cloud functiona
 
 ### What will I learn?
 
-You'll learn how to use AWS Amplify - a framework, CLI, and hosting service - to build a full stack cloud application.
+You'll learn how to use AWS Amplify - a framework, CLI, and hosting service - to build a full stack web application.
 
 #### Hosting
-- Set up and host your app on a the AWS Global content delivery network (CDN)
+- Set up and host your app with AWS Amplify on the AWS console
 
 #### Authentication
-- Add authentication to your app
+- Add authentication to your app using the Amplify CLI and Libraries
 
 #### Data and storage
-- Add an API, database, and image storage to your app
+- Add an API, database, and image storage to your app using the Amplify CLI and Libraries
 
 # Build a ReactJS Notes app
-Deploy and host a React app and add interactivity with authentication, API, database, and image storage.
+- Deploy and host a React app and add interactivity with authentication, API, database, and image storage.
 
 ## Overview
 - Attributes for the __Tutorial Summary Card__ (AWS experience level, time to complete, $ to complete, prerequisites)
 - What you will learn
-- Application Architecture
+- Application Architecture (NOT NEEDED)
 - Modules
 
 ## Prerequisites
